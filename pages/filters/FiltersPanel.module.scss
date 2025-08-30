@@ -1,0 +1,36 @@
+.filterPanel {
+    width: calc(100% - 12px); 
+    border-top: 2px solid #97939356;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    button{
+            background-color: transparent;
+            outline: none;
+            font-size: 8pt;
+            border: none;
+            color: #979393;
+            &:hover{
+                background-color: #615f5f17;
+                border-radius: 0px;
+            }
+        }
+    .fiterButtons{
+        display: flex;
+        gap: 8px;
+        button{
+            background-color: transparent;
+            outline: none;
+            border-radius: 2px;
+            padding: 4px;
+            border: 1px solid transparent;
+            &:hover{
+                background-color: #615f5f17;
+                border-radius: 2px;
+            }
+        }
+    .btnActive {
+        border-color: #979393 ;
+    }
+    }
+}

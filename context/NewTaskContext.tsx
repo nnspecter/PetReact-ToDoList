@@ -10,6 +10,12 @@ const TaskContextProvider = ({ children }: { children: React.ReactNode }) => {
     }
     
     const [tasks, setTasks] = useState<Task[]>([]);
+    const[filter, setFilter] = useState("all");
+
+    const changeFilter = useCallback((newFilter: string)=>{
+        setFilter(newFilter);
+        console.log(newFilter)
+    }, [filter])
    
     const addTask = useCallback((newTask: string) => {
         const cloneTask = tasks.find((el) => el.task === newTask);
@@ -23,7 +29,7 @@ const TaskContextProvider = ({ children }: { children: React.ReactNode }) => {
         console.log("Добавлено");
         return true;
 
-    }, [tasks]); // зависимость tasks
+    }, [tasks]); 
 
     const handleChange = useCallback((taskId: string) => {
         setTasks((prev) => {
@@ -37,18 +43,20 @@ const TaskContextProvider = ({ children }: { children: React.ReactNode }) => {
                 el.id === taskId ? { ...el, state: !el.state } : el
             );
         });
-    }, []); // нет зависимостей
+    }, []); 
 
-    const handleDelete = useCallback((taskId: string) => {
-        setTasks((prev) => prev.filter((el) => el.id !== taskId));
-    }, []); // нет зависимостей
+    const handleDelete = useCallback(() => {
+        setTasks((prev) => prev.filter((el) => el.state !== true));
+    }, []); 
 
     const contextValue = useMemo(() => ({
         tasks,
         addTask,
         handleChange,
-        handleDelete
-    }), [tasks, addTask, handleChange, handleDelete]);
+        handleDelete,
+        filter,
+        changeFilter
+    }), [tasks, addTask, handleChange, handleDelete, filter, changeFilter]);
 
     return (
         <TaskContext.Provider value={contextValue}>

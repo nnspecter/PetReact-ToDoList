@@ -1,0 +1,26 @@
+.inputLine{
+    .inputButton{
+        width: 100%;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        justify-content: center;
+        
+        input{
+            width: 100%;
+            padding: 15px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 12pt;
+        }
+        button{
+            border: none;
+            color: #979393;
+            &:hover{
+                background-color: #615f5f17;
+                border-radius: 0px;
+            }
+        }
+    }
+    border: 2px solid #97939356;
+}
