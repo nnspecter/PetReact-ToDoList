@@ -6,7 +6,9 @@ import { BiCircle } from "react-icons/bi";
 import { BiChevronDownCircle } from "react-icons/bi";
 const TaskPreview = ({ task }) => { 
     const { handleChange } = useContext(TaskContext);
-    
+    if (!task) {
+        return <></>
+    }
     
     return (
         <div className={styles.taskContainer}>
