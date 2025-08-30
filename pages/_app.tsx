@@ -1,3 +1,4 @@
+import React from "react";
 import type { AppProps } from "next/app";
 import TaskContextProvider from "../context/NewTaskContext";
 import "./global.scss"

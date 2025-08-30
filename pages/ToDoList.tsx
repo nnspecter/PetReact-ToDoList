@@ -1,8 +1,6 @@
 
 import React, { useContext } from 'react'
 import AllTasks from './tasks/all/AllTasks'
-import CurrentTasks from './tasks/current/CurrentTasks'
-import CompleteTasks from './tasks/complete/CompleteTasks'
 import Input from './Input/Input'
 import styles from "./ToDoList.module.scss"
 import { AnimatePresence, motion } from 'motion/react'
