@@ -25,3 +25,4 @@
 - [TypeScript](https://www.typescriptlang.org/)  
 - [Framer Motion](https://www.framer.com/motion/) для анимаций  
 - [SCSS](https://sass-lang.com/) для стилей
+- [MUI]([https://sass-lang.com/](https://mui.com)) для стильных компонентов
