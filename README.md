@@ -20,7 +20,7 @@
 
 ## 🛠️ Технологии
 - [React](https://react.dev/)
-- [Zustand](https://github.com/pmndrs/zustand)** – простой и лёгкий state-менеджер для React. 
+- [Zustand](https://github.com/pmndrs/zustand) – простой и лёгкий state-менеджер для React. 
 - [Next.js](https://nextjs.org/)  
 - [TypeScript](https://www.typescriptlang.org/)  
 - [Framer Motion](https://www.framer.com/motion/) для анимаций  
