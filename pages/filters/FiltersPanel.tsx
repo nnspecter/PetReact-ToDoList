@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import styles from "./FiltersPanel.module.scss"
-import { TaskContext } from '../../context/NewTaskContext'
 import { Button } from '@mui/material';
+import { useTaskStore } from '../../zustandStore/useTaskStore';
 const FiltersPanel = () => {
-    const{changeFilter, handleDelete, filter} = useContext(TaskContext);
+    const{changeFilter, filter, handleDelete} = useTaskStore();
   return (
     <div className={styles.filterPanel}>
         <div className={styles.fiterButtons}>

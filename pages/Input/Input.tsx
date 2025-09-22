@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import styles from "./input.module.scss"
-import { TaskContext } from '../../context/NewTaskContext';
 import { Button, TextField } from '@mui/material';
+import { useTaskStore } from '../../zustandStore/useTaskStore';
 const Input = () => {
   const [text, setText] = useState("");
-  const{addTask} = useContext(TaskContext);
+  const{addTask} = useTaskStore();
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {

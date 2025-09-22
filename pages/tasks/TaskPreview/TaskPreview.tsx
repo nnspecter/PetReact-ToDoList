@@ -4,8 +4,9 @@ import { Checkbox } from '@mui/material'
 import { TaskContext } from '../../../context/NewTaskContext';
 import { BiCircle } from "react-icons/bi";
 import { BiChevronDownCircle } from "react-icons/bi";
+import { useTaskStore } from '../../../zustandStore/useTaskStore';
 const TaskPreview = ({ task }) => { 
-    const { handleChange } = useContext(TaskContext);
+    const{handleChange} = useTaskStore();
     if (!task) {
         return <></>
     }

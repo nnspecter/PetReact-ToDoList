@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { TaskContext } from '../../../context/NewTaskContext'
 import TaskPreview from '../TaskPreview/TaskPreview'
 import styles from "./AllTasks.module.scss"
 import { AnimatePresence, motion } from 'motion/react'
+import { useTaskStore } from '../../../zustandStore/useTaskStore'
 
 const AllTasks = () => {
-  const { tasks, filter } = useContext(TaskContext)
+  const{ tasks, filter } = useTaskStore()
 
   let filteredTasks = tasks
 

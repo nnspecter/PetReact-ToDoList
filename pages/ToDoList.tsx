@@ -1,13 +1,10 @@
-
-import React, { useContext } from 'react'
+import React from 'react'
 import AllTasks from './tasks/all/AllTasks'
 import Input from './Input/Input'
 import styles from "./ToDoList.module.scss"
 import { AnimatePresence, motion } from 'motion/react'
 import FiltersPanel from './filters/FiltersPanel'
-import { TaskContext } from '../context/NewTaskContext'
 const ToDoList = () => {
-  const {filter} = useContext(TaskContext);
   return (
     <div className={styles.ToDoList}>
       <AnimatePresence>
