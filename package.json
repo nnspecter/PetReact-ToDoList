@@ -17,7 +17,8 @@
     "motion": "^12.23.12",
     "next": "^15.5.2",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.28.3",
